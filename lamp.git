@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# LAMP Script httpd & php & mariadb install script
+# Karl Heidar - karlh@karlh.no
+
+echo "Starting system update..."
+sudo dnf upgrade -y
+   
+dnf install httpd-tools httpd-devel httpd mod_ssl mod_perl -y 
+dnf install mariadb-server mariadb-tools mariadb-server-utils mariadb-devel -y 
+dnf install mariadb mariadb-tools mariadb-server-utils -y
+
+echo "Installation complete!"
