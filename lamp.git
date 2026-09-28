@@ -6,7 +6,7 @@ echo "Starting system update..."
 sudo dnf upgrade -y
    
 dnf install httpd-tools httpd-devel httpd mod_ssl mod_perl -y 
-dnf install mariadb-server mariadb-tools mariadb-server-utils mariadb-devel -y 
-dnf install mariadb mariadb-tools mariadb-server-utils -y
+dnf install mariadb-server mariadb-client-utils mariadb-server-utils mariadb-devel -y 
+dnf install php-mysqlnd php php-mbstring php-gd php-fpm php-common
 
 echo "Installation complete!"
